@@ -12,8 +12,16 @@ export class AppComponent {
         { name: 'learn angular' },
         { name: 'create an app' }];
 
+    get unfinishedTodos(): number {
+        return this.todos.filter(t => !t.completed).length;
+    }
+
     createTodo() {
         this.todos.push({ name: this.newTodo });
         this.newTodo = '';
+    }
+
+    deleteTodo(todo: Todo) {
+        this.todos.splice(this.todos.indexOf(todo), 1);
     }
 }
