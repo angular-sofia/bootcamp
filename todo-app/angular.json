@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/todo-mvc.css",
               "src/styles.css"
             ],
             "scripts": [],
